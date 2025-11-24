@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #6a00ff, #b066ff);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 🔹 Navbar */
+    nav {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav h3 {
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* 🔹 Menu Links */
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffd6ff;
+      text-shadow: 0 0 8px rgba(255,255,255,0.6);
+    }
+
+    /* 🔹 Hamburger Menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      width: 25px;
+      height: 20px;
+      justify-content: space-between;
+    }
+
+    .menu-toggle span {
+      background: #fff;
+      height: 3px;
+      width: 100%;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    #menu-checkbox {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        right: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px);
+        border-radius: 10px;
+        padding: 15px;
+        width: 220px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+      }
+
+      #menu-checkbox:checked ~ .nav-links {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px;
+        text-align: center;
+      }
+    }
+
+    /* 🔹 Container */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      background: #fff;
+      margin: 40px auto;
+      border-radius: 15px;
+      padding: 30px 40px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 0.7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h2 {
+      text-align: center;
+      color: #6a0dad;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    thead {
+      background-color: #6a0dad;
+      color: white;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f8f0ff;
+    }
+
+    tbody tr:hover {
+      background-color: #efe0ff;
+      transition: 0.3s;
+    }
+
+    th {
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* 🔹 Tombol Aksi */
+    .aksi-btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 13px;
+    }
+
+    .edit {
+      background-color: #a366ff;
+      color: white;
+    }
+
+    .edit:hover {
+      background-color: #8733ff;
+      transform: scale(1.05);
+    }
+
+    .hapus {
+      background-color: #ff5c8a;
+      color: white;
+    }
+
+    .hapus:hover {
+      background-color: #ff3366;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      color: #fff;
+      margin-top: 30px;
+      padding-bottom: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* 🔹 Responsif Tabel */
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead { display: none; }
+
+      td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: 600;
+        color: #6a0dad;
+      }
+    }
+
+    
+/* Batasi ukuran kolom PASSWORD supaya tidak melebar */
+td:nth-child(6), th:nth-child(6) {
+  max-width: 120px;        /* Lebar kolom */
+  overflow: hidden;        /* Sembunyikan teks yang kepanjangan */
+  text-overflow: ellipsis; /* Tambahkan ... */
+  white-space: nowrap;     /* Jangan pindah baris */
+}

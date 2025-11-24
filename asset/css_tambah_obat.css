@@ -1,0 +1,123 @@
+/* === GLOBAL STYLE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f4f8;
+}
+
+/* === NAVBAR === */
+nav {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1abc9c;
+}
+
+/* === CONTAINER FORM === */
+.container {
+    width: 420px;
+    background: white;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* === FORM INPUT === */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+/* === BUTTON STYLE === */
+.aksi-btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 48%;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.edit {
+    background: #1abc9c;
+    color: white;
+}
+
+.edit:hover {
+    background: #16a085;
+}
+
+.hapus {
+    background: #e74c3c;
+    color: white;
+}
+
+.hapus:hover {
+    background: #c0392b;
+}
+
+/* Tombol dibawah form */
+form a button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    color: #555;
+}

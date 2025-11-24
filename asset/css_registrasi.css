@@ -1,0 +1,92 @@
+ body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    /* Kotak utama form */
+    .login-box {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 40px 35px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      width: 320px;
+      color: #fff;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .login-box:hover {
+      transform: scale(1.02);
+    }
+
+    .login-box h2 {
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    /* Label dan input */
+    .login-box label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="email"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #333;
+      font-size: 14px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .login-box input:focus {
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(37,117,252,0.7);
+    }
+
+    /* Tombol login */
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: linear-gradient(90deg, #2575fc, #6a11cb);
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .login-box button:hover {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      transform: scale(1.03);
+    }
+
+    /* Teks tambahan */
+    .login-box p {
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    .login-box a {
+      color: #fff;
+      text-decoration: underline;
+    }

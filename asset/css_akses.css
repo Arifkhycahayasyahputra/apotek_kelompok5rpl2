@@ -1,0 +1,29 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  padding-top: 120px;
+}
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 40px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  background: white;
+  color: #2575fc;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+a:hover {
+  background: #2575fc;
+  color: white;
+}
